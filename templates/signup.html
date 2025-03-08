@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todoリスト</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+  <h1>ユーザー登録</h1>
+  <!-- ユーザー登録 -->
+  <form action="{{ url_for('signup') }}" method="POST" class="form">
+    <input type="text" name="name" placeholder="ユーザー名" class="form-input" required>
+    <input type="password" name="password" placeholder="パスワード" class="form-input" required>
+    <button type="submit" class="button">登録</button>
+  </form>
+  <a href="/login">ログインはこちら</a>
+
+  <!-- エラー文の表示 -->
+  {% if error: %}
+  <p class="error">{{ error }}</p>
+  {% endif %}
+
+</body>
+</html>
