@@ -30,7 +30,7 @@ def create_tables():
     con.close()
 
 
-# すべてのtodoの読み込み
+# すべてのToDoの読み込み
 def get_todos(u_id):
     con = sqlite3.connect(DATABASE)
     cur = con.cursor()
@@ -41,7 +41,7 @@ def get_todos(u_id):
     return todos
 
 
-# todoの追加
+# ToDoの追加
 def add_todo(t_id, todo, u_id):
     con = sqlite3.connect(DATABASE)
     cur = con.cursor()
@@ -51,7 +51,7 @@ def add_todo(t_id, todo, u_id):
     con.close()
 
 
-# todoの更新
+# ToDoの更新
 def update_todo(id):
     con = sqlite3.connect(DATABASE)
     cur = con.cursor()
@@ -61,7 +61,7 @@ def update_todo(id):
     con.close()
 
 
-# todoの削除
+# ToDoの削除
 def delete_todo(id):
     con = sqlite3.connect(DATABASE)
     cur = con.cursor()

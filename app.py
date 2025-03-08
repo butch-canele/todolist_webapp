@@ -9,10 +9,10 @@ app = init_app()
 
 
 """
-Todoリスト
+ToDoリスト
 
 """
-# Todoリスト画面の表示
+# ToDoリスト画面の表示
 @app.route("/")
 def show_todos():
     u_id = request.cookies.get("u_id")
@@ -26,7 +26,7 @@ def show_todos():
     return render_template("index.html", todos=todos)
 
 
-# Todoリストの登録
+# ToDoリストの登録
 @app.route("/", methods=["POST"])
 def create_todo():
     u_id = request.cookies.get("u_id")
@@ -36,7 +36,7 @@ def create_todo():
     return redirect(url_for("show_todos"))
 
 
-# Todoリストの更新
+# ToDoリストの更新
 @app.route("/update", methods=["POST"])
 def update_todo():
     id = request.form.get("todo_id")
@@ -45,7 +45,7 @@ def update_todo():
     return redirect(url_for("show_todos"))
 
 
-# Todoリストの削除
+# ToDoリストの削除
 @app.route("/delete", methods=["POST"])
 def delete_todo():
     id = request.form.get("todo_id")

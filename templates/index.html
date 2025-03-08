@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todoリスト</title>
+  <title>ToDoリスト</title>
   <link rel="stylesheet" href="../static/styles.css">
 </head>
 
 <body>
-    <h1>Todoリスト</h1>
+    <h1>ToDoリスト</h1>
     <form action="{{ url_for('logout') }}" method="POST" class="logout-form">
       <button type="submit" class="logout">ログアウト</button>
     </form>
 
-  <!-- 新しいTodoの登録 -->
+  <!-- 新しいToDoの登録 -->
   <form action="{{ url_for('create_todo') }}" method="POST" class="todo-form">
     <input type="text" name="todo" placeholder="新しいtodoを入力" required>
     <button type="submit" class="button">登録</button>
   </form>
 
-  <!-- Todoの表示 -->
+  <!-- ToDoの表示 -->
   {% for todo in todos %}
     {% if todo[2] == 0 %}
     <form method="POST" class="list-form">
@@ -33,8 +33,8 @@
     {% endif %}
   {% endfor %}
 
-  <!-- 完了したTodoの表示 -->
-  <p class="done-todo">完了したTodo</p>
+  <!-- 完了したToDoの表示 -->
+  <p class="done-todo">完了したToDo</p>
   {% for todo in todos %}
     {% if todo[2] == 1 %}
     <form method="POST" class="list-form">
