@@ -121,7 +121,3 @@ def logout():
     response.delete_cookie("u_id")
 
     return response
-
-
-if __name__ == "__main__":
-    app.run()
