@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <h1>ToDoリスト</h1>
-    <form action="{{ url_for('logout') }}" method="POST" class="logout-form">
-      <button type="submit" class="logout">ログアウト</button>
-    </form>
+  <h1>ToDoリスト</h1>
+  <form action="{{ url_for('logout') }}" method="POST" class="logout-form">
+    <button type="submit" class="logout">ログアウト</button>
+  </form>
 
   <!-- 新しいToDoの登録 -->
   <form action="{{ url_for('create_todo') }}" method="POST" class="todo-form">
