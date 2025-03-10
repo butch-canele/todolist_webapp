@@ -40,7 +40,6 @@ def create_todo():
 @app.route("/update", methods=["POST"])
 def update_todo():
     id = request.form.get("todo_id")
-    print(id)
     db.update_todo(id)
     return redirect(url_for("show_todos"))
 
